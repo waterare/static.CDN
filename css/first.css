@@ -25,8 +25,8 @@
   --color-list: #666;
   --color-list-hl: #8a6c9e;
   --color-meta: #888;
-  --color-read-bkg: #e0d8c8;
-  --color-read-post: #f8f1e2;
+  --color-read-bkg: #f4f4f4;
+  --color-read-post: #fff;
   --color-copyright-bkg: #f5f5f5;
 }
 * {
@@ -820,14 +820,14 @@ button {
 }
 @font-face {
   font-family: 'LXGW WenKai Screen';
-  src: url("volantis-local/font/LXGWWenKaiMonoScreen.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@master/font/LXGWWenKaiMonoScreen.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
