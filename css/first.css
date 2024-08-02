@@ -13,7 +13,7 @@
   --color-card: #fff;
   --color-text: #444;
   --color-block: #f6f6f6;
-  --color-inlinecode: #c74f00;
+  --color-inlinecode: #ad88c6;
   --color-codeblock: #fff7ea;
   --color-h1: #3a3a3a;
   --color-h2: #3a3a3a;
@@ -23,7 +23,7 @@
   --color-h6: #666;
   --color-p: #444;
   --color-list: #666;
-  --color-list-hl: #1f8b4c;
+  --color-list-hl: #8a6c9e;
   --color-meta: #888;
   --color-read-bkg: #e0d8c8;
   --color-read-post: #f8f1e2;
@@ -45,13 +45,13 @@
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background: #27ae60;
+  background: #ad88c6;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 *::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #e1afd1;
 }
 html {
   color: var(--color-text);
@@ -68,13 +68,13 @@ html >::-webkit-scrollbar-track-piece {
   background: transparent;
 }
 html >::-webkit-scrollbar-thumb {
-  background: #27ae60;
+  background: #ad88c6;
   cursor: pointer;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
 html >::-webkit-scrollbar-thumb:hover {
-  background: #ff5722;
+  background: #e1afd1;
 }
 body {
   background-color: var(--color-site-body);
@@ -97,7 +97,7 @@ body.modal-active {
   }
 }
 a {
-  color: #2092ec;
+  color: #7469b6;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.28s ease;
@@ -108,7 +108,7 @@ a {
   -ms-transition: all 0.28s ease;
 }
 a:hover {
-  color: #ff5722;
+  color: #e1afd1;
 }
 a:active,
 a:hover {
@@ -681,7 +681,7 @@ button {
     --color-text: rgba(238,238,238,0.871);
     --color-block: #434343;
     --color-codeblock: #1f1f1f;
-    --color-inlinecode: #d56d28;
+    --color-inlinecode: #ad88c6;
     --color-h1: rgba(255,255,255,0.871);
     --color-h2: rgba(255,255,255,0.871);
     --color-h3: rgba(255,255,255,0.6);
@@ -690,7 +690,7 @@ button {
     --color-h6: rgba(255,255,255,0.6);
     --color-p: rgba(217,217,217,0.871);
     --color-list: rgba(217,217,217,0.871);
-    --color-list-hl: #52be7f;
+    --color-list-hl: #bd9fd1;
     --color-meta: rgba(191,191,191,0.871);
     --color-link: rgba(191,191,191,0.871);
     --color-copyright-bkg: #21252b;
@@ -753,7 +753,7 @@ button {
   --color-text: rgba(238,238,238,0.871);
   --color-block: #434343;
   --color-codeblock: #1f1f1f;
-  --color-inlinecode: #d56d28;
+  --color-inlinecode: #ad88c6;
   --color-h1: rgba(255,255,255,0.871);
   --color-h2: rgba(255,255,255,0.871);
   --color-h3: rgba(255,255,255,0.6);
@@ -762,7 +762,7 @@ button {
   --color-h6: rgba(255,255,255,0.6);
   --color-p: rgba(217,217,217,0.871);
   --color-list: rgba(217,217,217,0.871);
-  --color-list-hl: #52be7f;
+  --color-list-hl: #bd9fd1;
   --color-meta: rgba(191,191,191,0.871);
   --color-link: rgba(191,191,191,0.871);
   --color-copyright-bkg: #21252b;
@@ -820,14 +820,14 @@ button {
 }
 @font-face {
   font-family: 'LXGW WenKai Screen';
-  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@master/font/LXGWWenKaiMonoScreen.ttf");
+  src: url("volantis-local/font/LXGWWenKaiMonoScreen.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  src: url("volantis-static/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -1031,7 +1031,7 @@ button {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  color: #27ae60;
+  color: #ad88c6;
 }
 .l_header .switcher >li >a:hover {
   border: none;
@@ -1211,7 +1211,7 @@ ul.m-pc >li>a {
 }
 ul.m-pc >li>a:active,
 ul.m-pc >li>a.active {
-  border-bottom: 2px solid #27ae60;
+  border-bottom: 2px solid #ad88c6;
 }
 ul.m-pc li:hover >ul.list-v,
 ul.list-v li:hover >ul.list-v {
@@ -1350,7 +1350,7 @@ ul.list-v >li>a:hover {
 }
 .l_header ul.nav-list-h>li >a:active,
 .l_header ul.nav-list-h>li >a.active {
-  color: #27ae60;
+  color: #ad88c6;
 }
 .l_header ul.nav-list-h>li:hover>a {
   color: var(--color-list-hl);
