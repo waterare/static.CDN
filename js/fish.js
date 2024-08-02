@@ -341,7 +341,10 @@ FISH.prototype = {
     }
 };
 $(function () {
-    RENDERER.init();
+   const $container = $('#jsi-flying-fish-container');
+    if ($container) {
+        RENDERER.init();
+    }
 });
 
 function toggle() {

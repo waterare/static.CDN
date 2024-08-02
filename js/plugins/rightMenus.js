@@ -541,17 +541,17 @@ RightMenus.fun = (() => {
     DOMController.removeList([
       '.cus-article-bkg', '.iziToast-overlay', '.iziToast-wrapper', '.prev-next',
       'footer', '#l_header', '#l_cover', '#l_side', '#comments', '#s-top', '#BKG',
-      '#rightmenu-wrapper', '.nav-tabs', '.parallax-mirror', '.new-meta-item.share', 
+      '#rightmenu-wrapper', '.nav-tabs', '.parallax-mirror', '.new-meta-item.share',
       '.new-meta-box', 'button.btn-copy', 'iframe'
     ]);
     DOMController.setStyleList([
-      ['body', 'backgroundColor', 'unset'], ['#l_main, .copyright.license', 'width', '100%'],  
-      ['#post', 'boxShadow', 'none'], ['#post', 'background', 'none'], ['#post', 'padding', '0'],  
-      ['h1', 'textAlign', 'center'], ['h1', 'fontWeight', '600'], ['h1', 'fontSize', '2rem'], ['h1', 'marginBottom', '20px'], 
-      ['.tab-pane', 'display', 'block'], ['.tab-content', 'borderTop', 'none'], ['.highlight>table pre', 'whiteSpace', 'pre-wrap'], 
-      ['.highlight>table pre', 'wordBreak', 'break-all'], ['.fancybox img', 'height', 'auto'], ['.fancybox img', 'weight', 'auto'], 
-      ['.copyright.license', 'margin', '0'], ['.copyright.license', 'padding', '1.25em 20px'],  
-      ['figure.highlight, .copyright.license', 'display', 'inline-block'], 
+      ['body', 'backgroundColor', 'unset'], ['#l_main, .copyright.license', 'width', '100%'],
+      ['#post', 'boxShadow', 'none'], ['#post', 'background', 'none'], ['#post', 'padding', '0'],
+      ['h1', 'textAlign', 'center'], ['h1', 'fontWeight', '600'], ['h1', 'fontSize', '2rem'], ['h1', 'marginBottom', '20px'],
+      ['.tab-pane', 'display', 'block'], ['.tab-content', 'borderTop', 'none'], ['.highlight>table pre', 'whiteSpace', 'pre-wrap'],
+      ['.highlight>table pre', 'wordBreak', 'break-all'], ['.fancybox img', 'height', 'auto'], ['.fancybox img', 'weight', 'auto'],
+      ['.copyright.license', 'margin', '0'], ['.copyright.license', 'padding', '1.25em 20px'],
+      ['figure.highlight, .copyright.license', 'display', 'inline-block'],
     ]);
     setTimeout(() => {
       window.print();
@@ -567,18 +567,19 @@ RightMenus.fun = (() => {
       document.querySelector('#l_cover'), document.querySelector('footer'),
       document.querySelector('#s-top'), document.querySelector('.article-meta#bottom'),
       document.querySelector('.prev-next'), document.querySelector('#l_side'),
-      document.querySelector('#comments'), 
+      document.querySelector('#comments'),
     ]);
     DOMController.toggleClassList([
       [document.querySelector('#l_main'), 'common_read'], [document.querySelector('#l_main'), 'common_read_main'],
       [document.querySelector('#l_body'), 'common_read'], [document.querySelector('#safearea'), 'common_read'],
-      [document.querySelector('#read_bkg'), 'common_read_hide'], 
+      [document.querySelector('#read_bkg'), 'common_read_hide'],
       [document.querySelector('h1'), 'common_read_h1'], [document.querySelector('#post'), 'post_read'],
       [document.querySelector('#l_cover'), 'read_cover'], [document.querySelector('.widget.toc-wrapper'), 'post_read']
     ]);
     DOMController.setStyle('.copyright.license', 'margin', '15px 0');
     volantis.isReadModel = volantis.isReadModel === undefined ? true : !volantis.isReadModel;
     if (volantis.isReadModel) {
+      appendReadModeURLQueryParam()
       if (RightMenus.messageRightMenu) VolantisApp.message('系统提示', '阅读模式已开启，您可以点击屏幕空白处退出。', {
         backgroundColor: 'var(--color-read-post)',
         icon: rightMenuConfig.options.iconPrefix + ' fa-book-reader',
@@ -592,6 +593,7 @@ RightMenus.fun = (() => {
         }
       });
     } else {
+      removeReadModeURLQueryParam()
       document.querySelector('#l_body').removeEventListener('click', fn.readMode);
       document.querySelector('#post').removeEventListener('click', fn.readMode);
       DOMController.setStyle('.prev-next', 'display', 'flex');
@@ -610,9 +612,37 @@ Object.freeze(RightMenus);
 volantis.requestAnimationFrame(() => {
   if (document.readyState !== 'loading') {
     RightMenus.initialMenu();
+    postEnterReadMode()
   } else {
     document.addEventListener("DOMContentLoaded", function () {
       RightMenus.initialMenu();
+      postEnterReadMode()
     })
   }
 });
+
+const postEnterReadMode = () => {
+  if (!!(document.querySelector('#post.article') || null)) {
+    const searchParams = new URLSearchParams(window.location.search)
+    if (searchParams.get('mode') === 'read') {
+      RightMenus.fun.hideMenu()
+      RightMenus.fun.readMode()
+    }
+  }
+}
+
+const appendReadModeURLQueryParam = () => {
+  const params = new URLSearchParams(location.search);
+  params.set('mode', 'read');
+  const url = new URL(window.location);
+  url.search = params.toString();
+  history.pushState({}, '', url);
+}
+
+const removeReadModeURLQueryParam = () => {
+  const params = new URLSearchParams(location.search);
+  params.delete('mode', 'read');
+  const url = new URL(window.location);
+  url.search = params.toString();
+  history.pushState({}, '', url);
+}
