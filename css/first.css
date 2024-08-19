@@ -820,14 +820,14 @@ button {
 }
 @font-face {
   font-family: 'LXGW WenKai Screen';
-  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.0/font/LXGWWenKaiMonoScreen.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.1/font/LXGWWenKaiMonoScreen.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
 }
 @font-face {
   font-family: 'Varela Round';
-  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.0/font/VarelaRound-Regular.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.1/font/VarelaRound-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;

@@ -255,7 +255,7 @@ th {
 }
 @font-face {
   font-family: 'JetBrainsMono';
-  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.0/font/JetBrainsMono-Light.ttf");
+  src: url("https://cdn.jsdelivr.net/gh/spcookie/static.spcookie.github.io@1.2.1/font/JetBrainsMono-Light.ttf");
   font-weight: 'normal';
   font-style: 'normal';
   font-display: swap;
@@ -7269,14 +7269,13 @@ pre[class*=language-].line-numbers>code {
   top: 16px !important;
   left: 0 !important;
   background-color: var(--color-block) !important;
-  -webkit-background-clip: content !important;
-  -moz-background-clip: content !important;
-  background-clip: content-box !important;
-  border-left: 1px solid transparent !important;
 }
 table {
   margin: 0 auto;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: revert !important;
+}
+.article pre {
+  border: none !important;
 }
