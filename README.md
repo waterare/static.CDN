@@ -55,3 +55,5 @@ https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/bgimg/back-rain.png       ## 获
 https://cdn.jsdelivr.net/gh/xiezhr/mycdn@1.0/source/bgimg/back-rain.png   ## 获取1.0版本的资源
 注意： 版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
 
+https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/img/qq.png
+https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/fish.js
