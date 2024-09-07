@@ -2,7 +2,7 @@ var RENDERER = {
     // 点间隔：5
     POINT_INTERVAL: 5,
     // 鱼计数：3
-    FISH_COUNT: 3,
+    FISH_COUNT: 1,
     // 最大间隔计数：50
     MAX_INTERVAL_COUNT: 50,
     // 初始权重：0.5
@@ -356,3 +356,17 @@ function toggle() {
 }
 
 volantis.dark.push(toggle)
+
+
+
+// FISH.prototype.GRAVITY = 0.6; // 例如，增加重力大小
+FISH.prototype.GRAVITY = 0.47; // 例如，增加重力大小
+// RENDERER.INIT_HEIGHT_RATE = 0.3; // 例如，将初始高度比例调整为30%
+// RENDERER.INIT_HEIGHT_RATE = 0.6; // 例如，将初始高度比例调整为30%
+
+
+
+//使鱼在接近边界时速度逐渐减慢，从而避免突然的反转和可能的视觉跳跃。这可以通过在接近边界时逐渐减小速度来实现。
+if (this.y < this.renderer.height * 0.1 || this.y > this.renderer.height * 0.9) { // 接近边界  
+    this.vy *= 0.9; // 减小速度  
+}

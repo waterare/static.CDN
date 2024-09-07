@@ -1,0 +1,21 @@
+.fish-cover-bg {
+    width: 100%;
+    position: absolute;
+    /* bottom: -6%; */
+    bottom: -2%;
+    left: 0;
+}
+
+.fish-parallax {
+    width: 100%;
+    /* height: 200%; */
+    position: absolute;
+    /* bottom: -4%; */
+    bottom: -1%;
+    left: 0;
+}
+
+#jsi-flying-fish-container {  
+    height: 230px; /* 你可以根据需要调整这个值 */  
+    width: 100%; /* 宽度可以设置为百分比或固定值 */  
+}

@@ -57,3 +57,13 @@ https://cdn.jsdelivr.net/gh/xiezhr/mycdn@1.0/source/bgimg/back-rain.png   ## 获
 
 https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/img/qq.png
 https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/fish.js
+
+
+
+```yaml
+# https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7
+
+# https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/bsz.js
+# https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/comment-typing.js
+```
+
