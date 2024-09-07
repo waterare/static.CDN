@@ -36,5 +36,22 @@ git push origin --tags
 
 ## cdn
 
-
 cdn.waterare.github.io
+
+
+
+### jsDelivr + Github 的具体实现
+
+通过如下地址应用资源
+
+
+```cobol
+https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
+```
+
+举个栗子,获取source/bgimg路径下的back-rain.png
+
+https://cdn.jsdelivr.net/gh/xiezhr/mycdn/source/bgimg/back-rain.png       ## 获取最新资源
+https://cdn.jsdelivr.net/gh/xiezhr/mycdn@1.0/source/bgimg/back-rain.png   ## 获取1.0版本的资源
+注意： 版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
+
