@@ -67,3 +67,10 @@ https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/fish.js
 # https://cdn.jsdelivr.net/gh/waterare/static.CDN@v1.2.7/js/comment-typing.js
 ```
 
+v2.0.2 添加列表
+
+- tag-cloud.ejs
+- manifest.json
+- tag.ejs
+
+- echarts.min.js

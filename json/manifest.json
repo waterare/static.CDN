@@ -1,0 +1,19 @@
+{
+    "id": "erik",
+    "name": "Erik's Blog",
+    "short_name": "Blog",
+    "start_url": "./index.html",
+    "dir": "auto",
+    "lang": "zh-CN",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "北诗笔记",
+    "icons": [
+      {
+        "src": "custom/beetroot.png",
+        "sizes": "248x248",
+        "type": "image/png"
+      }
+    ]
+  }
+  
