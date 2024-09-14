@@ -366,7 +366,7 @@ FISH.prototype.GRAVITY = 0.47; // 例如，增加重力大小
 
 
 
-//使鱼在接近边界时速度逐渐减慢，从而避免突然的反转和可能的视觉跳跃。这可以通过在接近边界时逐渐减小速度来实现。
-if (this.y < this.renderer.height * 0.1 || this.y > this.renderer.height * 0.9) { // 接近边界  
-    this.vy *= 0.9; // 减小速度  
-}
+// //使鱼在接近边界时速度逐渐减慢，从而避免突然的反转和可能的视觉跳跃。这可以通过在接近边界时逐渐减小速度来实现。
+// if (this.y < this.renderer.height * 0.1 || this.y > this.renderer.height * 0.9) { // 接近边界  
+//     this.vy *= 0.9; // 减小速度  
+// }
