@@ -7,13 +7,11 @@
 推送Tag到GitHub：
 使用git push origin v<版本号>命令将你的tag推送到GitHub上。如果你想要推送所有的tag（包括新创建的和其他已经存在的），可以使用git push origin --tags命令。
 
-
-
-
+一款图像处理git的软件[Sourcetree | Free Git GUI for Mac and Windows (sourcetreeapp.com)](https://www.sourcetreeapp.com/)
 
 git 命令：
 
-```git
+```python
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/waterare/static.waterare.github.io.git
@@ -25,14 +23,24 @@ git push origin --tags
 git tag -d 1.2.6	#删除旧的标签
 git push origin 1.2.7
 git tag -a v1.2.7 -m "添加readme" 
-git push origin --tags
+git push origin --tags #本地标签推送到origin远程仓库
+git push origin <标签名> #如果你只想推送一个特定的标签
 ```
 
+`git push origin --tags` 只负责推送标签，而不涉及代码的推送。如果你在 GitHub 上看不到最新代码，那么问题很可能与代码的推送有关。
 
+`git push origin main`推送到远程main分支，git log origin/main #查看远程仓库master分支的提交历史。
 
+第一次新建仓库进行提交，可以使用`git pull origin main`  # 拉取远程仓库origin的main分支的更改
 
+## 查看远程log
 
+如果你已经有了一个本地的克隆，但想要查看远程分支的最新提交历史，你可以先使用`git fetch`来从远程仓库获取最新的数据（但不会合并或改变你的工作目录），然后使用`git log`来查看远程分支的log。
 
+```python
+git fetch origin  
+git log origin/<分支名>
+```
 
 ## cdn
 
