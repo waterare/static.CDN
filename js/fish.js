@@ -21,6 +21,12 @@ var RENDERER = {
         this.$window = $(window);
         this.$container = $('#jsi-flying-fish-container');
         this.$canvas = $('<canvas />');
+
+        console.log(this.$container); // 检查容器
+        console.log(this.$canvas); // 检查画布
+        this.$canvas.appendTo(this.$container); // 确保成功附加
+        this.context = this.$canvas[0].getContext('2d'); // 使用 [0] 来访问原生 DOM 元素
+
         this.context = this.$canvas.appendTo(this.$container).get(0).getContext('2d');
         this.points = [];
         this.fishes = [];
@@ -341,10 +347,17 @@ FISH.prototype = {
     }
 };
 $(function () {
-   const $container = $('#jsi-flying-fish-container');
-    if ($container) {
-        RENDERER.init();
-    }
+//    const $container = $('#jsi-flying-fish-container');
+//     if ($container) {
+//         RENDERER.init();
+//     }
+        const $container = $('#jsi-flying-fish-container');
+        if ($container.length > 0) {
+            RENDERER.init();
+        } else {
+            console.error("Container not found");
+        }
+
 });
 
 function toggle() {
